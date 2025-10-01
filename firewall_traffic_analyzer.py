@@ -23,7 +23,7 @@ data = int(input("Enter the data transfer size in megabytes (MB): "))
 print("FIREWALL LOG:")
 print(f"Port: {port}, Transfer Size: {data} MB")
 #If port 22 (SSH) and transfer size > 500MB output
-if (port_number == 22 or port_number == 3389) and file_size_mb >= 100:
+if (port == 22 or port == 3389) and data >= 100:
     print("Risk Assessment: HIGH RISK: Potential unauthorized remote access detected!")
 
 #Else if port 80 (HTTP) with transfer size > 100MB output
